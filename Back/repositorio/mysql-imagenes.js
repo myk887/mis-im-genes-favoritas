@@ -5,8 +5,9 @@ const postImage = async ({imageSave}) => {
     let result
 
         [result] = await connection.query('INSERT INTO imagenes SET ?', {titulo: imageSave.titulo,Imagen: imageSave.Imagen})
-
+        console.log(result)
     if (!result.affectedRows) return false
+    console.log(result)
 
     return {titulo: imageSave.titulo,Imagen: imageSave.Imagen}
 }
@@ -17,6 +18,13 @@ const getImage = async () => {
     if (!imagenes) return false
 
     return imagenes
+}
+const getImagebyId = async ({id}) => {
+    const [imagen] = await  connection.query('select * from imagenes where id = ?', [id])
+
+    if (!imagen) return false
+
+    return imagen
 }
 
 const editImage = async ({id, imageSave }) => {
@@ -50,5 +58,6 @@ module.exports = {
     postImage,
     getImage,
     editImage,
-    deleteImage
+    deleteImage,
+    getImagebyId
 }

@@ -1,0 +1,43 @@
+@import './../colores.css' ;
+
+input[type=file] {
+    display: none;
+}
+
+.SubirImagenes-div {
+    margin-top: 10vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gris2);
+}
+
+.SubirImagenes-div2 {
+    width:  75%;
+    height: 70%;
+    background-color: var(--gris1);
+    border: 2px solid var(--gris3);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.SubirImagenes-div3 {
+    cursor: pointer;
+}
+
+.SubirImagenes-imagen {
+    height: 30vh;
+    width: 30vw;
+}
+
+.SubirImagenes-input {
+    width: 25vw;
+}
+
+.SubirImagenes-div3 .SubirImagenes-button {
+    font-size: 3rem;
+}

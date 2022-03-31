@@ -76,6 +76,25 @@ router.get('/', async (req, res) => {
     res.status(200)
     res.send(result)
 })
+router.get('/:id', async (req, res) => {
+    const idImage = req.params.id
+    let result
+    try {
+        result = await imagenesRepositorio.getImagebyId({id: idImage})
+    } catch (error) {
+        res.status(500)
+        res.end({error: error.message})
+        return
+    }
+
+    if (!result) {
+        res.status(404)
+        res.end({error: 'no encontradas imagenes'})
+        return
+    }
+    res.status(200)
+    res.send(result)
+})
 
 router.delete('/', async (req, res) => {
     const {id} = req.body
@@ -88,6 +107,7 @@ router.delete('/', async (req, res) => {
         res.end({error: error.message})
         return
     }
+    
     if (!newImage) {
         res.status(401)
         res.end({error: ' no se ha podido borrar '})
@@ -107,7 +127,7 @@ router.patch('/:id', async (req, res) => {
         newImage = await guardarImagenes(req.files.image)
     } catch (error) {
         res.status(500)
-        res.end(error.message)
+        res.end({error: error.message})
         return
     }}
 

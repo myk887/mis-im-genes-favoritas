@@ -1,38 +1,44 @@
+@import './Imagenes/colores.css' ;
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TP {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: red;
+  background-color: var(--gris1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TP div  {
+  border: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  gap: 2rem;
+ }
+
+.TP div button {
+ border: none;
+ cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.BP:hover {
+  font-size: 1rem;
+  background-color: var(--gris3);
+ }
+.BS:hover {
+  font-size: 1rem;
+  background-color: var(--gris3);
 }

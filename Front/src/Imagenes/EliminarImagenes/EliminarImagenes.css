@@ -1,0 +1,6 @@
+@import './../colores.css' ;
+
+.EliminarImagenes-div {
+    background-color: var(--gris3);
+    padding: 2rem;
+}

@@ -1,0 +1,33 @@
+@import './../colores.css' ;
+
+
+.listaImagenes-container {
+    margin-top: 10vh;
+    background-color: var(--gris2);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+
+.listaImagenes-divMap {
+    background-color: var(--gris1);
+    border: 2px solid var(--gris3);
+    width: 35vw;
+    padding: 1rem;
+}
+
+.listaImagenes-imagen {
+    width: 15vw;
+    height: 15vh;
+}
+
+.listaImagenes-titulo {
+    color: var(--gris5);
+}
+
+.listaImagenes-titulo:first-letter {
+    text-transform: uppercase;
+}

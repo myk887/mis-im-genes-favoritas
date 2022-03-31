@@ -1,0 +1,51 @@
+@import './../colores.css' ;
+
+.imagenId-imagen {
+    width: 50vw;
+    max-height: 50vh;
+
+}
+
+.imagenId-titulo {
+    font-size: 2.5rem;
+}
+
+.imagenId-titulo:first-letter {
+    text-transform: uppercase;
+}
+
+.imagenId-div {
+    margin-top: 10vh;
+    height: 90vh;
+    background-color: var(--gris2);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imagenId-CP {
+    background-color: var(--gris1);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid var(--gris3);
+}
+
+.imagenId-container {
+    width: 50vw;
+}
+
+.imagenId-buttons {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.imagenId-button {
+    font-size: 2rem;
+}
