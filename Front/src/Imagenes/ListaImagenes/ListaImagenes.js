@@ -11,7 +11,7 @@ function ListaImagenes() {
     return(
         <div className="listaImagenes-container">
           {
-          !imagenes ? <h1>No tines imagnes, AGREGA UNA.</h1>
+          !imagenes.length ? <h1>No tienes imágenes, <Link to='/imagen/nueva'>AGREGA UNA.</Link></h1>
           :
           imagenes?.map(imagen =>
               <div key={imagen.id} className="listaImagenes-divMap">
